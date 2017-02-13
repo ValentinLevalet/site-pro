@@ -2,85 +2,70 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <style>
-            body {
-                font-family: sans-serif;
-            }
-
-            div {
-                height: 500px;
-            }
-
-            h2, .retour {
-                text-align: center;
-            }
-
-            li {
-                display: inline-block;
-            }
-
-            p {
-                margin: auto;
-                width: 75%;
-            }
-
-            section {
-                min-height: 400px;
-            }
-
-            a {
-                color: lightgrey;
-                outline: none;
-                text-decoration: none;
-            }
-
-            a:hover {
-                color: grey;
-            }
-
-            .retour {
-                font-size: 2em;
-            }
-
-            .wrapper {
-                margin: auto;
-                max-width: 1024px;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
     </head>
     <body>
         <div class="wrapper">
-            <ul>
-                <li><a href="#presentation">Présentation</a></li>
+            <!-- <ul>
+                <li><a href="#presentation">Présentation<img src="images/moa.svg" alt="moa"></a></li>
                 <li><a href="#experience">Parcours professionnel</a></li>
                 <li><a href="#labo">Lab</a></li>
                 <li><a href="#divers">Divers</a></li>
-            </ul>
-        <div class="wrapper">
-            <section id="presentation">
-                <h2>Présentation</h2>
-                <p>Je m'appelle Valentin Levalet, je suis un développeur web frontend de 30 ans. J'aime créer des applications pour la vie de tous les jours, des sites accessibles et agréables à utiliser. J'ai aussi un espace d'expérimentation.</p>
-                <p>J'ai une formation communication visuelle, avec spécialisation 3d (ECV, Nantes, 2005-2006; Graphicréatis, Nantes, 2006-2008), et une formation chef de projet web (f2i, Paris, 2013-2014).</p>
-                <h3 class="retour"><a href="#" title="retour en haut">^</a></h3>
-            </section>
-            <section id="experience">
-                <h2>Parcours professionnel</h2>
+            </ul> -->
+            
+            <head>
+                <img src="images/logo.svg" alt="logo">
+            </head>
+            <div class="wrapper-rangee">
+                <section id="presentation">
+                    <h2>Présentation</h2>
+                    <p>Je m'appelle Valentin Levalet, j'ai 30 ans et je suis développeur web front en devenir. J'aime créer des sites/applications web pour la vie de tous les jours, accessibles et agréables à utiliser. J'expérimente diverses librairies pour mes projets.</p>
+                    <p>J'ai une formation communication visuelle, avec spécialisation 3d (<a href="http://www.ecv.fr" target="_blank">ECV Nantes</a> puis <a href="http://www.creanum.fr/formation/ecoles/articletype/articleview/articleid/880/graphicreatis-ecole-de-graphisme-pour-la-formation-graphiste-et-infographiste.aspx" target="_blank">Graphicréatis Nantes</a> <br>et une formation chef de projet web : <a href="http://www.institut-f2i.fr/" target="_blank">f2i Paris</a>.</p>
+                    <!--<h3 class="retour"><a href="#" title="retour en haut">^</a></h3>-->
+                </section>
+                <section id="experience">
+                    <h2>Expérience</h2>
 
-                <p>Wizarbox juin 2008 > septembre 2009</p>
-                <p>Europharma depuis août 2010</p>
-                <h3 class="retour"><a href="#" title="retour en haut">^</a></h3>
-            </section>
-            <section id="labo">
-                <h2>Lab</h2>
-                <p>Voici quelques expérimentations web, essayez-les !</p>
-                <h3 class="retour"><a href="#" title="retour en haut">^</a></h3>
-            </section>
-            <section id="divers">
-                <h2>Divers</h2>
-                <p>Je lis, dessine et joue à des jeux vidéo cools !</p>
-                <h3 class="retour"><a href="#" title="retour en haut">^</a></h3>
-            </section>
-        </section>
-        </section>
+                    <p>Graphiste 3D chez <a href="https://fr.wikipedia.org/wiki/Wizarbox" target="_blank">Wizarbox</a>  sur le développement sur le jeu vidéo Gray Matter 06/2008 > 09/2009</p>
+                    <p>Intégrateur web, contrôle qualité chez <a href="http://www.europharma.fr/" target="_blank">Europharma</a> depuis 08/2010</p>
+                    <!--<h3 class="retour"><a href="#" title="retour en haut">^</a></h3>-->
+                </section>
+            </div>
+            <div class="wrapper-rangee">
+                <section id="labo">
+                    <h2>Lab</h2>
+                    <p>Voici quelques expérimentations web, essayez-les !</p>
+                    <a href="https://github.com/ValentinLevalet/dpt_quiz">https://github.com/ValentinLevalet/dpt_quiz</a>
+                    <!--<h3 class="retour"><a href="#" title="retour en haut">^</a></h3>-->
+                </section>
+                <section id="divers">
+                    <h2>Divers</h2>
+                    <p>Je lis, dessine et joue à des jeux vidéo cools !</p>
+                    <!--<h3 class="retour"><a href="#" title="retour en haut">^</a></h3>-->
+                </section>
+            </div>
+            <div class="wrapper-rangee">
+                <a href="mailto:valentin.levalet@gmail.com">valentin.levalet@gmail.com</a>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var a = ["lightgrey", "lightblue", "lightyellow", "lightcyan"];
+            var i = 0;
+            var b = document.getElementsByTagName('body');
+            b = b[0];
+
+            console.log(b)
+            function init(){
+              setTimeout(function(e){
+                //alert(a[i]);
+                if(i == 3)i = 0;
+                b.style.background = a[i];
+                i++;
+                init();
+              },10000);
+            };
+            init();
+        </script>
     </body>
 </html>

@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+}
+body {
+    cursor: default;
+    display: table;
+    font-family: sans-serif;
+    margin: 0;
+    background: lightgreen;
+    transition: background 10s;
+}
+
+/*body:hover {
+    background: lightcyan;
+}*/
+
+/*div {
+    height: 500px;
+}*/
+
+h2, .retour {
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 0 0 transparent;
+}
+
+ul {
+    display: table;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+li {
+    display: table-cell;
+    width: 10%;
+}
+
+img {
+    width: 220px;
+}
+
+img:hover {
+    filter: drop-shadow(-8px 6px 0px #0F0);
+}
+
+section {
+    width: 50%;
+    display: table-cell;
+    padding: 1% 9%;
+}
+
+section:hover > h2 {
+    text-shadow: -8px 4px 0 rgba(0,0,0,.1);
+}
+
+a {
+    color: black;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.retour {
+    font-size: 2em;
+}
+
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    padding: 0 15%;
+    vertical-align: middle;
+}
+
+.wrapper-rangee {
+    display: table-row;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        display: block;
+    }
+
+    section {
+        display: inline;
+        width: auto;
+    }
+
+    .wrapper {
+        padding: 1em 2em;
+    }
+}
