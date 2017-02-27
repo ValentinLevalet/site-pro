@@ -2,21 +2,15 @@ html, body {
     height: 100%;
 }
 body {
+    background: lightgreen;
     cursor: default;
     display: table;
     font-family: sans-serif;
     margin: 0;
-    background: lightgreen;
+    margin: auto;
+    max-width: 1024px;
     transition: background 10s;
 }
-
-/*body:hover {
-    background: lightcyan;
-}*/
-
-/*div {
-    height: 500px;
-}*/
 
 h2, .retour {
     font-weight: normal;
@@ -37,18 +31,32 @@ li {
     width: 10%;
 }
 
-img {
+textarea {
+    height: 1.25em;
+}
+
+.logo {
     width: 220px;
 }
 
-img:hover {
+.logo:hover, .icone-contact:hover {
     filter: drop-shadow(-8px 6px 0px #0F0);
+}
+
+.icone-contact {
+    height: 30px;
+    width: 30px;
 }
 
 section {
     width: 50%;
     display: table-cell;
-    padding: 1% 9%;
+    padding: 1% 5% 1% 0;
+}
+
+section + section {
+    padding-left: 5%;
+    padding-right: 0;
 }
 
 section:hover > h2 {
@@ -71,15 +79,41 @@ a:hover {
 .wrapper {
     display: table-cell;
     height: 100%;
-    padding: 0 15%;
     vertical-align: middle;
+    margin: auto;
 }
 
 .wrapper-rangee {
-    display: table-row;
+    /* display: table-row; */
 }
 
-@media screen and (max-width: 900px) {
+.div-form, form, input, textarea {
+    display: inline;
+    vertical-align: top;
+}
+
+.div-form {
+    padding: 5px;
+    width: 500px;
+    display: inline-block;
+    overflow: hidden;
+    transition: width 1s;
+}
+
+.div-form.hidden {
+    width: 0;
+}
+
+.form-container {
+    display: block;
+    width: 560px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
     body {
         display: block;
     }

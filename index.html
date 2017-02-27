@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
+        <title>valev</title>
         <link rel="stylesheet" type="text/css" href="styles/style.css">
     </head>
     <body>
@@ -14,7 +15,7 @@
             </ul> -->
             
             <head>
-                <img src="images/logo.svg" alt="logo">
+                <img src="images/logo.svg" alt="logo" class="logo">
             </head>
             <div class="wrapper-rangee">
                 <section id="presentation">
@@ -35,37 +36,36 @@
                 <section id="labo">
                     <h2>Lab</h2>
                     <p>Voici quelques expérimentations web, essayez-les !</p>
-                    <a href="https://github.com/ValentinLevalet/dpt_quiz">https://github.com/ValentinLevalet/dpt_quiz</a>
+                    <a href="https://github.com/ValentinLevalet/dpt_quiz" target="_blank">https://github.com/ValentinLevalet/dpt_quiz</a>
                     <!--<h3 class="retour"><a href="#" title="retour en haut">^</a></h3>-->
                 </section>
                 <section id="divers">
                     <h2>Divers</h2>
-                    <p>Je lis, dessine et joue à des jeux vidéo cools !</p>
+                    <p>Je lis, dessine, joue aux jeux vidéo (et les modifie), modélise en 3d, aime faire des découvertes !</p>
                     <!--<h3 class="retour"><a href="#" title="retour en haut">^</a></h3>-->
                 </section>
             </div>
             <div class="wrapper-rangee">
-                <a href="mailto:valentin.levalet@gmail.com">valentin.levalet@gmail.com</a>
+                <img src="images/lettre.svg" alt="" class="icone-contact">
+                <div class="div-form hidden">
+                    <span class="form-container">
+                        <form action="/mail.php" id="usrform">
+                            <input type="email" placeholder="Votre e-mail">
+                            <input type="text" placeholder="Objet">
+                        </form>
+                        <textarea rows="1" form="usrform" placeholder="Message"></textarea>
+                        <input type="submit">
+                    </span>
+                </div>
+                <a href="https://fr.linkedin.com/in/valentin-levalet-62a03714" target="_blank"><img src="images/Linkedin_icon.svg" alt="" class="icone-contact"></a>
+                <a href="https://twitter.com/valeeeeeentin" target="_blank"><img src="images/twitter.svg" alt="" class="icone-contact"></a>
+                <a href="http://fr.viadeo.com/fr/profile/valentin.levalet" target="_blank"><img src="images/Viadeo_Full_Logo.svg" alt="" class="icone-contact"></a>
+                <a href="https://github.com/ValentinLevalet" target="_blank"><img src="images/github.svg" alt="" class="icone-contact"></a>
             </div>
         </div>
-
+        <script src="scripts/script.js"></script>
         <script type="text/javascript">
-            var a = ["lightgrey", "lightblue", "lightyellow", "lightcyan"];
-            var i = 0;
-            var b = document.getElementsByTagName('body');
-            b = b[0];
-
-            console.log(b)
-            function init(){
-              setTimeout(function(e){
-                //alert(a[i]);
-                if(i == 3)i = 0;
-                b.style.background = a[i];
-                i++;
-                init();
-              },10000);
-            };
-            init();
+            
         </script>
     </body>
 </html>
