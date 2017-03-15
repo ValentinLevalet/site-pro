@@ -1,4 +1,4 @@
-var a = ["lightgrey", "lightblue", "lightyellow", "lightcyan"];
+var a = ["azure", "lavenderblush", "mintcream", "whitesmoke"];
 var i = 0;
 var b = document.getElementsByTagName('body');
 b = b[0];
