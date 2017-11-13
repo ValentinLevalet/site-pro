@@ -9,7 +9,7 @@ html, body {
 body {
     cursor: default;
     display: table;
-    font: 18px "Cooper Hewitt Book", sans-serif;
+    font: 1.125em "Calibri", sans-serif;
     margin: 0;
     margin: auto;
     max-width: 1024px;
@@ -58,20 +58,12 @@ textarea {
 .logo-container:hover span {
   opacity: 1;
 }
-/**/
-/*
-.logo-v-1 {
-  transition: transform 1s;
-  transform-origin: 10% 50%;
-  animation-iteration-count: infinite;
-}*/
 
-/*.logo-a, .logo-l, .logo-e, .logo-v-2 {
+.logo-v-1 {
   opacity: 0;
-  transition-property: opacity;
-  transition-timing-function: linear;
-  transition-duration: .2s;
-}*/
+  transform-origin: 10px 11px;
+}
+
 
 .logo1 {
   width: 220px;
@@ -81,20 +73,21 @@ textarea {
 
 @keyframes logoanim2 {
   0% {
-    /*transform: rotate(360deg);*/
-    transform: none
+    opacity: 1;
+    transform: none;
   }
   20% {
-    transform: translateX(19%) rotate(180deg)
+    transform: translate(21px) rotate(180deg);
   }
   40% {
-    transform: translateX(40%) rotate(70deg)
+    transform: translate(42px,4px) rotate(58deg);
   }
   60% {
-    transform: translateX(60%) rotate(110deg)
+    transform: translate(62px,-1px) rotate(94deg);
   }
   100% {
-    transform: translateX(80%) rotate(0)
+    transform: translate(85px,-1px) rotate(0deg);
+    opacity: 1;
   }
 }
 
@@ -103,6 +96,9 @@ textarea {
     opacity: 0
   }
   20% {
+    opacity: 0
+  }
+  25% {
     opacity: 1
   }
   100% {
@@ -114,10 +110,10 @@ textarea {
   0% {
     opacity: 0
   }
-  20% {
+  40% {
     opacity: 0
   }
-  40% {
+  45% {
     opacity: 1
   }
   100% {
@@ -129,10 +125,10 @@ textarea {
   0% {
     opacity: 0
   }
-  40% {
+  60% {
     opacity: 0
   }
-  60% {
+  65% {
     opacity: 1
   }
   100% {
@@ -144,7 +140,7 @@ textarea {
   0% {
     opacity: 0
   }
-  60% {
+  95% {
     opacity: 0
   }
   100% {
@@ -177,7 +173,7 @@ textarea {
   animation-direction: normal; 
   animation-iteration-count: infinite;
   animation-name: logoanim2;
-  transform-origin: 10% 50%;
+  /*transform-origin: 10% 50%;*/
 }
 
 .tac {
@@ -191,7 +187,6 @@ textarea {
 
 section {
     margin: 70px auto;
-    width: 60%;
 }
 
 .lien-lab {
@@ -218,6 +213,7 @@ section {
     height: 100%;
     vertical-align: middle;
     margin: 80px auto;
+    max-width: 600px;
 }
 
 .lab-image {
