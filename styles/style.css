@@ -1,52 +1,53 @@
 @font-face {
-    font-family: "Cooper Hewitt Book";
-    src: url("../CooperHewitt-Book.otf");
+  font-family: "Cooper Hewitt Book";
+  src: url("../CooperHewitt-Book.otf");
 }
 
-html, body {
-    height: 100%;
-}
 body {
-    cursor: default;
-    display: table;
-    font: 1.125em "Calibri", sans-serif;
-    margin: 0;
-    margin: auto;
-    max-width: 1024px;
-    transition: background 10s;
+  cursor: default;
+  display: table;
+  font: 1.125em "Calibri", sans-serif;
+  margin: 0;
+  margin: auto;
+  max-width: 1024px;
+  transition: background 10s;
 }
 
-h2, .retour {
-    font-weight: normal;
-    margin: 0;
-    text-align: center;
-    text-shadow: 0 0 0 transparent;
+h2 {
+  font-weight: normal;
+  margin-bottom: .75em;
+  text-align: center;
+  text-shadow: 0 0 0 transparent;
+}
+
+p {
+  margin-top: 0;
 }
 
 ul {
-    display: table;
-    width: 100%;
-    text-align: center;
-    padding: 0;
+  display: table;
+  width: 100%;
+  text-align: center;
+  padding: 0;
 }
 
 li {
-    display: table-cell;
-    width: 10%;
+  display: table-cell;
+  width: 10%;
 }
 
 textarea {
-    height: 1.25em;
+  height: 1.25em;
 }
 
 .logo {
-    display: block;
-    margin: auto;
-    width: 220px;
+  display: block;
+  margin: auto;
+  width: 220px;
 }
 
 .logo:hover, .icone-contact:hover {
-    fill: #009f0d;
+  fill: #009f0d;
 }
 
 .logo-container:hover .signe {
@@ -63,7 +64,6 @@ textarea {
   opacity: 0;
   transform-origin: 10px 11px;
 }
-
 
 .logo1 {
   width: 220px;
@@ -150,120 +150,144 @@ textarea {
 
 .logo1:hover .logo-a {
   opacity: 0;
-  animation: 1.5s logoopaca normal infinite;
+  animation: 1.5s logoopaca forwards;
 }
 
 .logo1:hover .logo-l {
   opacity: 0;
-  animation: 1.5s logoopacl normal infinite;
+  animation: 1.5s logoopacl forwards;
 }
 
 .logo1:hover .logo-e {
   opacity: 0;
-  animation: 1.5s logoopace normal infinite;
+  animation: 1.5s logoopace forwards;
 }
 
 .logo1:hover .logo-v-2 {
   opacity: 0;
-  animation: 1.5s logoopacv normal infinite;
+  animation: 1.5s logoopacv forwards;
 }
 
 .logo1:hover .logo-v-1 {
   animation-duration: 1.5s;
-  animation-direction: normal; 
-  animation-iteration-count: infinite;
+  animation-direction: normal;
   animation-name: logoanim2;
-  /*transform-origin: 10% 50%;*/
 }
 
 .tac {
-    text-align: center;
+  text-align: center;
 }
 
 .icone-contact {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }
 
 section {
-    margin: 70px auto;
+  margin: 70px auto;
+  transition: margin 1s;
+}
+
+.lien {
+  color: #009f0d;
+  outline: none;
+  text-decoration: none;
+}
+
+.lien:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #009f0d;
 }
 
 .lien-lab {
-    cursor: default;
-}
-
-.lien, .lien-lab {
-    color: #009f0d;
-    outline: none;
-    text-decoration: none;
-}
-
-.lien:hover, .lien-lab:hover {
-    color: #fff;
-    text-decoration: none;
-    background-color: #009f0d;
-}
-
-.retour {
-    font-size: 2em;
+  cursor: help;
 }
 
 .wrapper {
-    height: 100%;
-    vertical-align: middle;
-    margin: 80px auto;
-    max-width: 600px;
+  height: 100%;
+  vertical-align: middle;
+  margin: 80px auto;
+  max-width: 600px;
+  transition: margin 1s;
 }
 
 .lab-image {
-    display: inline-block;
-    opacity: .5;
-    transition: opacity .2s;
-    width: 23%;
+  display: inline-block;
+  opacity: .5;
+  transition: opacity .2s;
+  width: 23%;
 }
 
 .lab-image:hover {
-    opacity: 1;
-}
-
-.div-form, form, input, textarea {
-    display: inline;
-    vertical-align: top;
-}
-
-.div-form {
-    padding: 5px;
-    width: 500px;
-    display: inline-block;
-    overflow: hidden;
-    transition: width 1s;
-}
-
-.div-form.hidden {
-    width: 0;
-}
-
-.form-container {
-    display: block;
-    width: 560px;
+  opacity: 1;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-@media screen and (max-width: 1024px) {
-    body {
-        display: block;
-    }
+.champ {
+  border: solid 1px gray;
+  display: block;
+  margin: auto auto 1.25em;
+  padding: .5em 0;
+}
 
-    section {
-        display: inline;
-        width: auto;
-    }
+button {
+  display: block;
+  margin: auto;
 
-    .wrapper {
-        padding: 1em 2em;
-    }
+}
+
+input {
+  /*font-size: 85%;*/
+  width: 40%;
+}
+
+textarea {
+  font-family: "Calibri", sans-serif;
+  /*font-size: 100%;*/
+  height: 4em;
+  margin-top: 1em;
+  width: 75%;
+}
+
+.tableau {
+  display: table;
+  margin: auto;
+  width: 100%;
+}
+
+.rangee {
+  display: table-row;
+}
+
+.cellule {
+  display: table-cell;
+  padding: 0 .5em .75em;
+  width: 50%;
+}
+
+.cellule:first-child {
+  text-align: right;
+}
+
+.cellule:nth-child(2) {
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    margin-top: 20px;
+    padding: 0 1em;
+  }
+
+  section {
+    margin: 35px auto;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
 }

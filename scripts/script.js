@@ -14,10 +14,3 @@ function init(){
   },10000);
 };
 init();
-
-var cont = document.getElementsByClassName('icone-contact');
-var form = document.getElementsByClassName('div-form');
-console.log(form)
-cont[0].addEventListener('click', function(){
-    form[0].classList.toggle('hidden');
-})
