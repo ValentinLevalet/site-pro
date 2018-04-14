@@ -166,6 +166,11 @@ textarea {
   text-align: center;
 }
 
+.bloc-text {
+  max-width: 16em;
+  text-align: justify;
+}
+
 .icone-contact {
   height: 30px;
   width: 30px;
@@ -292,14 +297,22 @@ textarea {
   }
 
   .menu-liens {
+    background-color: white;
     bottom: 0;
+    display: table;
     top: auto;
-    margin: .1em;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-liens li {
+    display: table-cell;
   }
 
   .menu-liens a {
     display: block;
-    padding: 10px 0;
+    padding: 10px 0 0;
   }
 
   .icone-contact {
