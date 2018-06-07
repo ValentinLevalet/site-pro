@@ -2,25 +2,38 @@
   font-family: "Cooper Hewitt Book";
   src: url("../CooperHewitt-Book.otf");
 }
+body, html {
+  height: 100%;
+}
 
 body {
   cursor: default;
-  display: table;
+  /*display: table;*/
   font: 1.125em "Calibri", sans-serif;
   margin: 0;
   margin: auto;
-  max-width: 1024px;
   transition: background 10s;
 }
-
+/*
+header, .table-cell {
+  display: table-cell;
+}*/
+header {
+  /*display: table;
+  height: 100%;*/
+  position: fixed;
+}
+.marge-header {
+  padding-top: 15vh;
+}
 h2 {
   font-weight: normal;
   margin-bottom: .75em;
-  text-align: center;
   text-shadow: 0 0 0 transparent;
 }
 
 p {
+  line-height: 1.5;
   margin-top: 0;
 }
 
@@ -54,9 +67,10 @@ textarea {
 }
 
 .logo1 {
+  height: 62px;
   width: 220px;
   display: block;
-  margin: auto;
+  margin-left: 1em;
 }
 
 @keyframes logoanim2 {
@@ -165,11 +179,11 @@ textarea {
 .tac {
   text-align: center;
 }
-
+/*
 .bloc-text {
   max-width: 16em;
   text-align: justify;
-}
+}*/
 
 .icone-contact {
   height: 30px;
@@ -177,8 +191,7 @@ textarea {
 }
 
 section {
-  margin: 70px auto;
-  transition: margin 1s;
+  margin-bottom: 5em;
 }
 
 .lien, .lien-lab {
@@ -202,34 +215,54 @@ section {
 }
 
 .wrapper {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 1.4em;
+}
+
+.wrapper-droit {
   height: 100%;
-  vertical-align: middle;
+  /*vertical-align: middle;
   margin: 80px auto 0;
   max-width: 600px;
-  transition: margin 1s;
+  transition: margin 1s;*/
+  margin: 0 0 0 270px;
+  /*padding-top: 50vh;*/
 }
 
 .lab-image {
+  border-radius: 4px;
   display: inline-block;
+  margin-right: .5em;
   opacity: .5;
   transition: opacity .2s;
-  width: 23%;
+  width: 130px;
 }
 
 .lab-image:hover {
   opacity: 1;
+  transform: scale(1.05) rotate(2deg);
+  z-index: 1;
+  box-shadow: 0 0 14px grey;
 }
 
 .hidden {
   display: none;
 }
 
+form {
+  width: 75%;
+}
+
 .champ {
-  border: solid 1px gray;
-  display: block;
-  font-size: .75em;
+  border: solid 1px #eaeaea;
+  /*display: block;
+  font-size: .75em;*/
+  font-size: inherit;
+  font-family: inherit;
   margin: auto auto 1.25em;
-  padding: .5em 0;
+  padding: .25em .1em;
+  width: 100%;
 }
 
 button {
@@ -238,21 +271,19 @@ button {
 
 }
 
-input {
+/*input {
   width: 75%;
-}
+}*/
 
 textarea {
   font-family: "Calibri", sans-serif;
   height: 4em;
   margin-top: 1em;
-  width: 75%;
+  /*width: 75%;*/
 }
 
 .tableau {
   display: table;
-  margin: auto;
-  width: 100%;
 }
 
 .rangee {
@@ -261,16 +292,7 @@ textarea {
 
 .cellule {
   display: table-cell;
-  padding: 0 .5em .75em;
-  width: 50%;
-}
-
-.cellule:first-child {
-  text-align: right;
-}
-
-.cellule:nth-child(2) {
-  text-align: left;
+  padding: 0 .5em .75em 0;
 }
 
 .menu-liens {
@@ -282,17 +304,25 @@ textarea {
   padding: 0;
 }
 
-@media screen and (max-width: 705px) {
-  .wrapper {
+#presentation p {
+  padding-top: .8em;
+}
+
+@media screen and (max-width: 40em) {
+  /*.wrapper {
     margin-top: 20px;
     padding: 0 1.4em;
+  }*/
+
+  /*section {
+    margin: 3em 0;
+  }*/
+
+  #presentation p {
+    padding-top: 0;
   }
 
-  section {
-    margin: 35px auto;
-  }
-
-  input, textarea {
+  form {
     width: 100%;
   }
 
@@ -318,5 +348,27 @@ textarea {
   .icone-contact {
     height: 20px;
     width: 20px;
+  }
+
+  .wrapper-droit {
+    margin: 0;
+  }
+
+  header {
+    position: initial;
+    text-align: center;
+  }
+
+  .marge-header {
+    padding-top: 2em;
+    display: inline-block;
+  }
+
+  .logo1 {
+    margin-left: 0;
+  }
+
+  section {
+    margin-bottom: 3em;
   }
 }
