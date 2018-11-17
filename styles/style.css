@@ -1,32 +1,21 @@
-@font-face {
-  font-family: "Cooper Hewitt Book";
-  src: url("../CooperHewitt-Book.otf");
-}
 body, html {
   height: 100%;
 }
 
 body {
   cursor: default;
-  /*display: table;*/
   font: 1.125em "Calibri", sans-serif;
-  margin: 0;
   margin: auto;
   transition: background 10s;
 }
-/*
-header, .table-cell {
-  display: table-cell;
-}*/
+
 header {
-  /*display: table;
-  height: 100%;*/
   position: fixed;
 }
 .marge-header {
   padding-top: 15vh;
 }
-h2 {
+h1 {
   font-weight: normal;
   margin-bottom: .75em;
   text-shadow: 0 0 0 transparent;
@@ -35,10 +24,6 @@ h2 {
 p {
   line-height: 1.5;
   margin-top: 0;
-}
-
-textarea {
-  height: 1.25em;
 }
 
 .logo {
@@ -52,8 +37,6 @@ textarea {
 }
 
 .logo-container:hover .signe {
-  /* left: 200px; */
-  /* transform: rotate(180deg); */
   animation: logoanim 2s 1;
 }
 
@@ -179,11 +162,6 @@ textarea {
 .tac {
   text-align: center;
 }
-/*
-.bloc-text {
-  max-width: 16em;
-  text-align: justify;
-}*/
 
 .icone-contact {
   height: 30px;
@@ -222,12 +200,7 @@ section {
 
 .wrapper-droit {
   height: 100%;
-  /*vertical-align: middle;
-  margin: 80px auto 0;
-  max-width: 600px;
-  transition: margin 1s;*/
   margin: 0 0 0 270px;
-  /*padding-top: 50vh;*/
 }
 
 .lab-image {
@@ -256,8 +229,6 @@ form {
 
 .champ {
   border: solid 1px #eaeaea;
-  /*display: block;
-  font-size: .75em;*/
   font-size: inherit;
   font-family: inherit;
   margin: auto auto 1.25em;
@@ -271,15 +242,10 @@ button {
 
 }
 
-/*input {
-  width: 75%;
-}*/
-
 textarea {
   font-family: "Calibri", sans-serif;
   height: 4em;
   margin-top: 1em;
-  /*width: 75%;*/
 }
 
 .tableau {
@@ -308,15 +274,7 @@ textarea {
   padding-top: .8em;
 }
 
-@media screen and (max-width: 40em) {
-  /*.wrapper {
-    margin-top: 20px;
-    padding: 0 1.4em;
-  }*/
-
-  /*section {
-    margin: 3em 0;
-  }*/
+@media screen and (max-width: 50em) {
 
   #presentation p {
     padding-top: 0;
@@ -371,4 +329,5 @@ textarea {
   section {
     margin-bottom: 3em;
   }
+
 }
