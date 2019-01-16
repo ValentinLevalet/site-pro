@@ -168,28 +168,34 @@ p {
   width: 30px;
 }
 
-section {
+.bloc-text {
   margin-bottom: 5em;
 }
 
 .lien, .lien-lab {
-  color: #009f0d;
+  color: #003D03;
+  padding-bottom: .1em;
   text-decoration: none;
 }
 
 .lien {
-  outline: none;
+  border-bottom: solid 1px rgba(0,61,3,.5);
   text-decoration: none;
 }
 
+.lien-lab {
+  border-bottom: dashed 1px rgba(0,61,3,.5);
+}
+
 .lien-lab:hover {
-  color: #fff;
+  /*color: #fff;*/
   cursor: help;
-  background-color: #009f0d;
+  border-bottom-width: 2px;
+  /*background-color: #006609;*/
 }
 
 .lien:hover {
-  border-bottom: 2px solid;
+  border-bottom-width: 2px;
 }
 
 .wrapper {
@@ -204,7 +210,7 @@ section {
 }
 
 .lab-image {
-  border-radius: 4px;
+  border-radius: 3px;
   display: inline-block;
   margin-right: .5em;
   opacity: .5;
@@ -228,7 +234,8 @@ form {
 }
 
 .champ {
-  border: solid 1px #eaeaea;
+  border: solid 1px #888;
+  border-radius: 3px;
   font-size: inherit;
   font-family: inherit;
   margin: auto auto 1.25em;
@@ -268,10 +275,6 @@ textarea {
   list-style-type: none;
   margin: 0 0 0 1em;
   padding: 0;
-}
-
-#presentation p {
-  padding-top: .8em;
 }
 
 @media screen and (max-width: 50em) {
@@ -326,7 +329,7 @@ textarea {
     margin-left: 0;
   }
 
-  section {
+  .bloc-text {
     margin-bottom: 3em;
   }
 
