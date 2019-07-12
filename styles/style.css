@@ -10,15 +10,24 @@ body {
 }
 
 header {
+  padding-top: 8em;
   position: fixed;
 }
+
 .marge-header {
   padding-top: 15vh;
 }
+
 h1 {
   font-weight: normal;
-  margin-bottom: .75em;
+  margin-bottom: .3em;
   text-shadow: 0 0 0 transparent;
+}
+
+h2 {
+  font-size: 130%;
+  font-weight: normal;
+  margin: 0;
 }
 
 p {
@@ -164,12 +173,12 @@ p {
 }
 
 .icone-contact {
-  height: 30px;
-  width: 30px;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 .bloc-text {
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
 .lien, .lien-lab {
@@ -207,6 +216,7 @@ p {
 .wrapper-droit {
   height: 100%;
   margin: 0 0 0 270px;
+  padding-top: 10.5em;
 }
 
 .lab-image {
@@ -234,25 +244,35 @@ form {
 }
 
 .champ {
-  border: solid 1px #888;
-  border-radius: 3px;
+  background: none;
+  border: none;
+  border-bottom: solid black 1px;
   font-size: inherit;
   font-family: inherit;
-  margin: auto auto 1.25em;
+  margin: auto auto 1em;
   padding: .25em .1em;
   width: 100%;
+  transition: background-color .5s;
+}
+
+.champ:invalid {
+  box-shadow: none;
 }
 
 button {
-  display: block;
+  border: none;
+  float: right;
+  font-family: calibri;
+  font-size: 1em;
   margin: auto;
-
+  padding: .25em 1em;
 }
 
 textarea {
   font-family: "Calibri", sans-serif;
   height: 4em;
   margin-top: 1em;
+  resize: vertical;
 }
 
 .tableau {
@@ -265,19 +285,27 @@ textarea {
 
 .cellule {
   display: table-cell;
-  padding: 0 .5em .75em 0;
+  padding: 0 .5em .5em 0;
 }
 
 .menu-liens {
-  position: fixed;
-  left: 0;
-  top: 41%;
   list-style-type: none;
-  margin: 0 0 0 1em;
   padding: 0;
 }
 
+.menu-liens li {
+  display: table-cell;
+}
+
 @media screen and (max-width: 50em) {
+
+  .cellule {
+    display: block;
+  }
+
+  .cellule-date {
+    padding-bottom: 0;
+  }
 
   #presentation p {
     padding-top: 0;
@@ -287,35 +315,13 @@ textarea {
     width: 100%;
   }
 
-  .menu-liens {
-    background-color: white;
-    bottom: 0;
-    display: table;
-    top: auto;
-    margin: 0;
-    text-align: center;
-    width: 100%;
-  }
-
-  .menu-liens li {
-    display: table-cell;
-  }
-
-  .menu-liens a {
-    display: block;
-    padding: 10px 0 0;
-  }
-
-  .icone-contact {
-    height: 20px;
-    width: 20px;
-  }
-
   .wrapper-droit {
     margin: 0;
+    padding-top: 1em;
   }
 
   header {
+    padding-top: 2em;
     position: initial;
     text-align: center;
   }
@@ -326,11 +332,7 @@ textarea {
   }
 
   .logo1 {
-    margin-left: 0;
-  }
-
-  .bloc-text {
-    margin-bottom: 3em;
+    margin: auto;
   }
 
 }
