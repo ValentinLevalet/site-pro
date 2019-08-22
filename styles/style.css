@@ -35,6 +35,14 @@ p {
   margin-top: 0;
 }
 
+.table {
+  display: table;
+}
+
+.mt-1 {
+  margin-top: -1em;
+}
+
 .logo {
   display: block;
   margin: auto;
@@ -174,6 +182,7 @@ p {
 
 .icone-contact {
   height: 1.5em;
+  padding: .5em;
   width: 1.5em;
 }
 
@@ -203,7 +212,7 @@ p {
   /*background-color: #006609;*/
 }
 
-.lien:hover {
+.lien:hover, .champ:hover, .champ:focus {
   border-bottom-width: 2px;
 }
 
@@ -220,11 +229,10 @@ p {
 }
 
 .lab-image {
-  border-radius: 3px;
   display: inline-block;
-  margin-right: .5em;
+  float: left;
+  margin: 1em 1em 0 0;
   opacity: .5;
-  transition: opacity .2s;
   width: 130px;
 }
 
@@ -232,7 +240,6 @@ p {
   opacity: 1;
   transform: scale(1.05) rotate(2deg);
   z-index: 1;
-  box-shadow: 0 0 14px grey;
 }
 
 .hidden {
