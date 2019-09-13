@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "fira sans";
+  src: url("firasans-italic-webfont.woff") format("woff");
+}
+
 body, html {
   height: 100%;
 }
@@ -10,7 +15,8 @@ body {
 }
 
 header {
-  padding-top: 8em;
+  padding-left: 18px;
+  padding-top: 155px;
   position: fixed;
 }
 
@@ -19,7 +25,8 @@ header {
 }
 
 h1 {
-  font-weight: normal;
+  font-family: "fira sans";
+  font-size: 1.4em;
   margin-bottom: .3em;
   text-shadow: 0 0 0 transparent;
 }
@@ -67,7 +74,7 @@ p {
 }
 
 .logo1 {
-  height: 62px;
+  height: 50px;
   width: 220px;
   display: block;
   margin-left: 1em;
@@ -187,13 +194,14 @@ p {
 }
 
 .bloc-text {
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
 }
 
 .lien, .lien-lab {
   color: #003D03;
   padding-bottom: .1em;
   text-decoration: none;
+  transition: border-bottom .1s;
 }
 
 .lien {
@@ -202,18 +210,12 @@ p {
 }
 
 .lien-lab {
+  cursor: help;
   border-bottom: dashed 1px rgba(0,61,3,.5);
 }
 
-.lien-lab:hover {
-  /*color: #fff;*/
-  cursor: help;
-  border-bottom-width: 2px;
-  /*background-color: #006609;*/
-}
-
-.lien:hover, .champ:hover, .champ:focus {
-  border-bottom-width: 2px;
+.lien-lab:hover, .lien:hover, .champ:hover, .champ:focus {
+  border-bottom-width: 3px;
 }
 
 .wrapper {
@@ -230,14 +232,20 @@ p {
 
 .lab-image {
   display: inline-block;
+  filter: saturate(0);
   float: left;
   margin: 1em 1em 0 0;
+  transition: all .1s;
+  width: 4em;
+}
+
+.lab-image-wrapper:hover .lab-image {
   opacity: .5;
-  width: 130px;
 }
 
 .lab-image:hover {
-  opacity: 1;
+  filter: saturate(100%);
+  opacity: 1 !important;
   transform: scale(1.05) rotate(2deg);
   z-index: 1;
 }
@@ -259,12 +267,13 @@ form {
   margin: auto auto 1em;
   padding: .25em .1em;
   width: 100%;
-  transition: background-color .5s;
+  transition: all .1s linear;
 }
 
-.champ:invalid {
+/*.champ:invalid {
+  border-bottom: solid #ae3232 1px;
   box-shadow: none;
-}
+}*/
 
 button {
   border: none;
@@ -295,13 +304,13 @@ textarea {
   padding: 0 .5em .5em 0;
 }
 
-.menu-liens {
+.liens-sociaux {
   list-style-type: none;
   padding: 0;
 }
 
-.menu-liens li {
-  display: table-cell;
+.liens-sociaux li {
+  display: inline;
 }
 
 @media screen and (max-width: 50em) {
@@ -328,7 +337,7 @@ textarea {
   }
 
   header {
-    padding-top: 2em;
+    padding: 2em 0 0;
     position: initial;
     text-align: center;
   }
@@ -340,6 +349,10 @@ textarea {
 
   .logo1 {
     margin: auto;
+  }
+
+  .liens-sociaux {
+    text-align: center;
   }
 
 }
