@@ -1,5 +1,6 @@
 @font-face {
   font-family: "fira sans";
+  font-display: swap;
   src: url("firasans-italic-webfont.woff") format("woff");
 }
 
@@ -11,7 +12,7 @@ body {
   cursor: default;
   font: 1.125em "Calibri", sans-serif;
   margin: auto;
-  transition: background 10s;
+  /*transition: background 10s;*/
 }
 
 header {
@@ -68,16 +69,31 @@ p {
   opacity: 1;
 }
 
-.logo-v-1 {
-  opacity: 0;
-  transform-origin: 10px 11px;
-}
-
-.logo1 {
+.logo1, .logo-fixe {
   height: 50px;
   width: 220px;
   display: block;
-  margin-left: 1em;
+}
+
+.logo-wrapper {
+  display: table;
+}
+
+.logo-wrapper:hover .logo-fixe {
+  display: none;
+}
+
+.logo1 {
+  display: none;
+}
+
+.logo-wrapper:hover .logo1 {
+  display: block;
+}
+
+.logo-v-1 {
+  opacity: 0;
+  transform-origin: 10px 11px;
 }
 
 @keyframes logoanim2 {
@@ -85,13 +101,13 @@ p {
     opacity: 1;
     transform: none;
   }
-  20% {
+  25% {
     transform: translate(21px) rotate(180deg);
   }
-  40% {
+  50% {
     transform: translate(42px,4px) rotate(58deg);
   }
-  60% {
+  75% {
     transform: translate(62px,-1px) rotate(94deg);
   }
   100% {
@@ -100,84 +116,35 @@ p {
   }
 }
 
-@keyframes logoopaca {
-  0% {
-    opacity: 0
-  }
-  20% {
-    opacity: 0
-  }
-  25% {
-    opacity: 1
-  }
-  100% {
-    opacity: 1
-  }
-}
-
-@keyframes logoopacl {
-  0% {
-    opacity: 0
-  }
-  40% {
-    opacity: 0
-  }
-  45% {
-    opacity: 1
-  }
-  100% {
-    opacity: 1
-  }
-}
-
-@keyframes logoopace {
-  0% {
-    opacity: 0
-  }
-  60% {
-    opacity: 0
-  }
-  65% {
-    opacity: 1
-  }
-  100% {
-    opacity: 1
-  }
-}
-
-@keyframes logoopacv {
-  0% {
-    opacity: 0
-  }
-  95% {
-    opacity: 0
-  }
-  100% {
-    opacity: 1
-  }
-}
-
-.logo1:hover .logo-a {
+.logo-v-0 {
   opacity: 0;
-  animation: 1.5s logoopaca forwards;
 }
 
-.logo1:hover .logo-l {
+.logo-a {
   opacity: 0;
-  animation: 1.5s logoopacl forwards;
+  transition: opacity .375s step-end;
 }
 
-.logo1:hover .logo-e {
+.logo-l {
   opacity: 0;
-  animation: 1.5s logoopace forwards;
+  transition: opacity .75s step-end;
 }
 
-.logo1:hover .logo-v-2 {
+.logo-e {
   opacity: 0;
-  animation: 1.5s logoopacv forwards;
+  transition: opacity 1.125s step-end;
 }
 
-.logo1:hover .logo-v-1 {
+.logo-v-2 {
+  opacity: 0;
+  transition: opacity 1.5s step-end;
+}
+
+.logo1:hover .logo-v-0, .logo1:hover .logo-a, .logo1:hover .logo-l, .logo1:hover .logo-e, .logo1:hover .logo-v-2 {
+  opacity: 1;
+}
+
+.logo-wrapper:hover .logo-v-1 {
   animation-duration: 1.5s;
   animation-direction: normal;
   animation-name: logoanim2;
@@ -297,11 +264,16 @@ textarea {
 
 .rangee {
   display: table-row;
+  line-height: 1.5;
 }
 
 .cellule {
   display: table-cell;
   padding: 0 .5em .5em 0;
+}
+
+.cellule-date {
+  color: darkgrey;
 }
 
 .liens-sociaux {
@@ -347,7 +319,7 @@ textarea {
     display: inline-block;
   }
 
-  .logo1 {
+  .logo-wrapper {
     margin: auto;
   }
 
