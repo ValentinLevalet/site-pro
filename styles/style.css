@@ -12,7 +12,6 @@ body {
   cursor: default;
   font: 1.125em "Calibri", sans-serif;
   margin: auto;
-  /*transition: background 10s;*/
 }
 
 header {
@@ -21,21 +20,11 @@ header {
   position: fixed;
 }
 
-.marge-header {
-  padding-top: 15vh;
-}
-
 h1 {
   font-family: "fira sans";
   font-size: 1.4em;
   margin-bottom: .3em;
   text-shadow: 0 0 0 transparent;
-}
-
-h2 {
-  font-size: 130%;
-  font-weight: normal;
-  margin: 0;
 }
 
 p {
@@ -51,22 +40,12 @@ p {
   margin-top: -1em;
 }
 
-.logo {
-  display: block;
-  margin: auto;
-  width: 220px;
+.logo-lien {
+  outline: none;
 }
 
-.logo:hover, .icone-contact:hover {
+.icone-contact:hover {
   fill: #009f0d;
-}
-
-.logo-container:hover .signe {
-  animation: logoanim 2s 1;
-}
-
-.logo-container:hover span {
-  opacity: 1;
 }
 
 .logo1, .logo-fixe {
@@ -80,15 +59,17 @@ p {
 }
 
 .logo-wrapper:hover .logo-fixe {
-  display: none;
+  opacity: 0;
 }
 
 .logo1 {
-  display: none;
+  margin-top: -50px;
+  opacity: 0;
+  will-change: opacity;
 }
 
 .logo-wrapper:hover .logo1 {
-  display: block;
+  opacity: 1;
 }
 
 .logo-v-1 {
@@ -96,7 +77,7 @@ p {
   transform-origin: 10px 11px;
 }
 
-@keyframes logoanim2 {
+@keyframes logoanim {
   0% {
     opacity: 1;
     transform: none;
@@ -120,24 +101,25 @@ p {
   opacity: 0;
 }
 
-.logo-a {
+.logo-a, .logo-l, .logo-e, .logo-v-2 {
   opacity: 0;
-  transition: opacity .375s step-end;
+  transition: opacity step-end 0;
 }
 
-.logo-l {
-  opacity: 0;
-  transition: opacity .75s step-end;
+.logo1:hover .logo-a {
+  transition: opacity step-end .375s;
 }
 
-.logo-e {
-  opacity: 0;
-  transition: opacity 1.125s step-end;
+.logo1:hover .logo-l {
+  transition: opacity step-end .75s;
 }
 
-.logo-v-2 {
-  opacity: 0;
-  transition: opacity 1.5s step-end;
+.logo1:hover .logo-e {
+  transition: opacity step-end 1.125s;
+}
+
+.logo1:hover .logo-v-2 {
+  transition: opacity step-end 1.5s;
 }
 
 .logo1:hover .logo-v-0, .logo1:hover .logo-a, .logo1:hover .logo-l, .logo1:hover .logo-e, .logo1:hover .logo-v-2 {
@@ -146,12 +128,7 @@ p {
 
 .logo-wrapper:hover .logo-v-1 {
   animation-duration: 1.5s;
-  animation-direction: normal;
-  animation-name: logoanim2;
-}
-
-.tac {
-  text-align: center;
+  animation-name: logoanim;
 }
 
 .icone-contact {
@@ -165,20 +142,19 @@ p {
 }
 
 .lien, .lien-lab {
-  color: #003D03;
+  color: rgba(22,98,0);
   padding-bottom: .1em;
   text-decoration: none;
-  transition: border-bottom .1s;
 }
 
 .lien {
-  border-bottom: solid 1px rgba(0,61,3,.5);
+  border-bottom: solid 1px rgba(22,98,0,.25);
   text-decoration: none;
 }
 
 .lien-lab {
   cursor: help;
-  border-bottom: dashed 1px rgba(0,61,3,.5);
+  border-bottom: solid 1px rgba(22,98,0,.5);
 }
 
 .lien-lab:hover, .lien:hover, .champ:hover, .champ:focus {
@@ -186,8 +162,8 @@ p {
 }
 
 .wrapper {
-  max-width: 1024px;
   margin: auto;
+  max-width: 1024px;
   padding: 0 1.4em;
 }
 
@@ -195,6 +171,26 @@ p {
   height: 100%;
   margin: 0 0 0 270px;
   padding-top: 10.5em;
+}
+
+#iframe-wrapper {
+  left: calc(50% - 175px);
+  position: fixed;
+  top: calc(50% - 300px);
+}
+
+#fermer {
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  right: 5px;
+  text-shadow: 0 0 3px #000;
+  top: 0px;
+}
+
+#demo {
+  border: none;
 }
 
 .lab-image {
@@ -206,9 +202,9 @@ p {
   width: 4em;
 }
 
-.lab-image-wrapper:hover .lab-image {
+/*.lab-image-wrapper:hover .lab-image {
   opacity: .5;
-}
+}*/
 
 .lab-image:hover {
   filter: saturate(100%);
@@ -217,8 +213,21 @@ p {
   z-index: 1;
 }
 
+/*[class^="lab-image-"] {
+  display: table;
+  outline: dashed 5px ;
+}*/
+
 .hidden {
   display: none;
+}
+
+.affiche {
+  display: block;
+}
+
+.opacity50 {
+  opacity: .2;
 }
 
 form {
@@ -229,18 +238,17 @@ form {
   background: none;
   border: none;
   border-bottom: solid black 1px;
-  font-size: inherit;
   font-family: inherit;
+  font-size: inherit;
   margin: auto auto 1em;
   padding: .25em .1em;
   width: 100%;
-  transition: all .1s linear;
 }
 
-/*.champ:invalid {
-  border-bottom: solid #ae3232 1px;
+.champ:invalid {
+  border-bottom-color: #ae3232;
   box-shadow: none;
-}*/
+}
 
 button {
   border: none;
@@ -273,7 +281,7 @@ textarea {
 }
 
 .cellule-date {
-  color: darkgrey;
+  color: dimgrey;
 }
 
 .liens-sociaux {
@@ -295,10 +303,6 @@ textarea {
     padding-bottom: 0;
   }
 
-  #presentation p {
-    padding-top: 0;
-  }
-
   form {
     width: 100%;
   }
@@ -314,11 +318,6 @@ textarea {
     text-align: center;
   }
 
-  .marge-header {
-    padding-top: 2em;
-    display: inline-block;
-  }
-
   .logo-wrapper {
     margin: auto;
   }
@@ -327,4 +326,9 @@ textarea {
     text-align: center;
   }
 
+}
+
+[class^=filtre] {
+  cursor: pointer;
+  padding: .5em;
 }
