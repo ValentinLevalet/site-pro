@@ -92,7 +92,7 @@ p {
 
 .logo-a, .logo-l, .logo-e, .logo-v-2 {
   opacity: 0;
-  transition: opacity step-end 0;
+  transition: opacity step-end;
 }
 
 .logo-wrapper:hover .logo-a, .logo-wrapper:focus .logo-a {
@@ -150,11 +150,9 @@ p {
   border-bottom-width: 3px;
 }
 
-
-
 .wrapper {
   margin: auto;
-  max-width: 1024px;
+  max-width: 900px;
   padding: 0 1.4em;
 }
 
@@ -236,24 +234,14 @@ p {
   opacity: .2;
 }
 
-form {
-  width: 75%;
-}
-
 .champ {
   background: none;
-  border: none;
-  border-bottom: transparent solid;
+  border: solid 1px;
   font-family: inherit;
   font-size: inherit;
   margin: auto auto 1em;
   padding: .25em .1em;
   width: 100%;
-}
-
-.champ:invalid {
-  border-bottom-color: #ae3232;
-  box-shadow: none;
 }
 
 button {
@@ -312,10 +300,6 @@ textarea {
 
   .cellule-date {
     padding-bottom: 0;
-  }
-
-  form {
-    width: 100%;
   }
 
   .wrapper-droit {

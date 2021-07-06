@@ -39,17 +39,17 @@
             </a>
         </header>
         <div class="wrapper-droit">
-            <p class="bloc-text">Je m'appelle Valentin Levalet, je suis développeur web front en devenir.<br>J'aime (et fabrique) du <a href="#labo" class="lien-lab">HTML</a>, <a href="#labo" class="lien-lab">CSS</a>, <a href="#labo" class="lien-lab">Javascript</a>, mais aussi du <a href="#labo" class="lien-lab">SVG</a>, <a href="#labo" class="lien-lab">Webgl</a>, et une pincée de <a href="#labo" class="lien-lab">JSON</a>.<br>J'ai suivi une formation en communication visuelle, avec spécialisation 3d.</p>
+            <p class="bloc-text">Je m'appelle Valentin Levalet, je suis développeur web front multicarte 🐙.<br>Issu d'une formation en communication visuelle/3d, je me suis ensuite spécialisé dans le web.<br>J'aime (et fabrique) du <a href="#labo" class="lien-lab">HTML</a>, <a href="#labo" class="lien-lab">CSS</a>, <a href="#labo" class="lien-lab">Javascript</a>, mais aussi du <a href="#labo" class="lien-lab">SVG</a>, <a href="#labo" class="lien-lab">Webgl</a>, et une pincée de <a href="#labo" class="lien-lab">JSON</a> et de Wordpress !<br></p>
             <section id="experience" class="bloc-text">
                 <h1>Expérience</h1>
                 <div class="tableau">
                     <div class="rangee">
-                        <span class="cellule cellule-date">2010 ···> maintenant</span>
-                        <span class="cellule"><strong>intégrateur / développeur web</strong><br>et contrôle qualité en e-learning pharmaceutique chez <a href="https://www.europharma.fr/" target="_blank" rel="noopener" class="lien">Europharma</a></span>
+                        <span class="cellule cellule-date">2010 ···> 2021</span>
+                        <span class="cellule"><strong>Intégrateur multimédia</strong><br>modules e-learning pharmaceutique chez <a href="https://www.europharma.fr/" target="_blank" rel="noopener" class="lien">Europharma</a>, sites d'actualité santé (Wordpress)</span>
                     </div>
                     <div class="rangee">
                         <span class="cellule cellule-date">2008 ···> 2009</span>
-                        <span class="cellule"><strong>graphiste 3D</strong><br>sur le développement du jeu vidéo <a href="https://fr.wikipedia.org/wiki/Gray_Matter_(jeu_vid%C3%A9o)" target="_blank" rel="noopener" class="lien">Gray Matter</a> chez <a href="https://fr.wikipedia.org/wiki/Wizarbox" target="_blank" rel="noopener" class="lien">Wizarbox</a></span>
+                        <span class="cellule"><strong>Graphiste 3D</strong><br>développement du jeu vidéo <a href="https://fr.wikipedia.org/wiki/Gray_Matter_(jeu_vid%C3%A9o)" target="_blank" rel="noopener" class="lien">Gray Matter</a> chez <a href="https://fr.wikipedia.org/wiki/Wizarbox" target="_blank" rel="noopener" class="lien">Wizarbox</a></span>
                     </div>
                 </div>
             </section>
@@ -71,16 +71,16 @@
             </section>
             <section class="bloc-text">
                 <h1>Contact</h1>
-                <p>Contactez-moi pour toute opportunité</p>
-                <form method="POST" action="https://formspree.io/valentin.levalet@gmail.com">
-                    <label>Votre e-mail :
-                        <input name="email" type="email" class="champ" required>
-                    </label>
-                    <label>Votre message :
-                        <textarea name="message" class="champ" required></textarea>
-                    </label>
-                    <input type="hidden" name="_language" value="fr" />
-                    <button type="submit">Envoyer</button>
+                <p>Voyons comment nous pouvons travailler ensemble.</p>
+                <form id="my-form" action="https://formspree.io/f/mwkaqzzy" method="POST">
+                  <label>Votre e-mail :
+                    <input type="email" name="email" class="champ" required/>
+                  </label>
+                  <label>Votre message :
+                    <input type="text" name="message" class="champ" required/>
+                  </label>
+                  <button id="my-form-button">Envoyer</button>
+                  <p id="my-form-status">&nbsp;</p>
                 </form>
             </section>
             <ul class="liens-sociaux">
@@ -103,5 +103,29 @@
         <div class="statcounter"><a title="Web Analytics Made Easy - StatCounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="//c.statcounter.com/11622943/0/ca3fbabf/1/" alt="Web Analytics Made Easy - StatCounter"></a></div>
     </noscript>
     <!-- End of StatCounter Code for Default Guide -->
+    <!-- formulaire Formspree -->
+    <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            status.innerHTML = "Merci pour votre message !";
+            form.reset()
+          }).catch(error => {
+            status.innerHTML = "Oups ! Il y a eu un souci dans la soumission du formulaire"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+    <!-- -->
 </body>
 </html>
