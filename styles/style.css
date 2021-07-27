@@ -15,8 +15,8 @@ body {
 }
 
 header {
-  padding-left: 18px;
-  padding-top: 155px;
+  padding-left: 41px;
+  padding-top: 142px;
   position: fixed;
 }
 
@@ -131,7 +131,7 @@ p {
 }
 
 .lien, .lien-lab {
-  color: rgba(22,98,0);
+  color: rgb(22,98,0);
   padding-bottom: .1em;
   text-decoration: none;
 }
@@ -260,7 +260,7 @@ textarea {
   resize: vertical;
 }
 
-.tableau {
+/*.tableau {
   display: table;
 }
 
@@ -272,11 +272,32 @@ textarea {
 .cellule {
   display: table-cell;
   padding: 0 .5em .5em 0;
+}*/
+
+.carte {
+  background-color: #f7f7f7;
+  margin-bottom: 1em;
+  padding: .75em;
 }
 
-.cellule-date {
-  color: dimgrey;
-  white-space: nowrap;
+.carte-liste {
+  list-style: none;
+  margin: .25em 0 0;
+  padding-left: .5em;
+  text-indent: -.5em;
+}
+
+.carte-liste-puce {
+  margin-top: .15em;
+}
+
+.carte-liste-puce:before {
+  content: "- ";
+}
+
+.date {
+  color: #545454;
+  font-style: italic;
 }
 
 .liens-sociaux {
@@ -309,7 +330,7 @@ textarea {
 
   header {
     padding: 2em 0 0;
-    position: initial;
+    position: relative;
     text-align: center;
   }
 

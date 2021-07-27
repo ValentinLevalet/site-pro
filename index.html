@@ -8,7 +8,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://valev.fr">
     <meta property="og:image" content="images/valev-logo.png">
-    <title>valev / Valentin Levalet / développeur web front</title>
+    <title>valentin levalet / développeur web front</title>
     <link rel="canonical" href="https://valev.fr" />
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
@@ -42,16 +42,8 @@
             <p class="bloc-text">Je m'appelle Valentin Levalet, je suis développeur web front multicarte 🐙.<br>Issu d'une formation en communication visuelle/3d, je me suis ensuite spécialisé dans le web.<br>J'aime (et fabrique) du <a href="#labo" class="lien-lab">HTML</a>, <a href="#labo" class="lien-lab">CSS</a>, <a href="#labo" class="lien-lab">Javascript</a>, mais aussi du <a href="#labo" class="lien-lab">SVG</a>, <a href="#labo" class="lien-lab">Webgl</a>, et une pincée de <a href="#labo" class="lien-lab">JSON</a> et de Wordpress !<br></p>
             <section id="experience" class="bloc-text">
                 <h1>Expérience</h1>
-                <div class="tableau">
-                    <div class="rangee">
-                        <span class="cellule cellule-date">2010 ···> 2021</span>
-                        <span class="cellule"><strong>Intégrateur multimédia</strong><br>modules e-learning pharmaceutique chez <a href="https://www.europharma.fr/" target="_blank" rel="noopener" class="lien">Europharma</a>, sites d'actualité santé (Wordpress)</span>
-                    </div>
-                    <div class="rangee">
-                        <span class="cellule cellule-date">2008 ···> 2009</span>
-                        <span class="cellule"><strong>Graphiste 3D</strong><br>développement du jeu vidéo <a href="https://fr.wikipedia.org/wiki/Gray_Matter_(jeu_vid%C3%A9o)" target="_blank" rel="noopener" class="lien">Gray Matter</a> chez <a href="https://fr.wikipedia.org/wiki/Wizarbox" target="_blank" rel="noopener" class="lien">Wizarbox</a></span>
-                    </div>
-                </div>
+                <div class="carte"><span class="date">août 2010 ► avril 2021</span><br><strong>Intégrateur multimédia</strong><ul class="carte-liste"><li class="carte-liste-puce">intégration de modules e-learning médical chez <a href="https://www.europharma.fr/" target="_blank" rel="noopener" class="lien">Europharma</a></li><li class="carte-liste-puce">intégration sites d'actualité santé (Wordpress)</li></ul></div>
+                <div class="carte"><span class="date">juin 2008 ► septembre 2009</span><br><strong>Graphiste 3D</strong><ul class="carte-liste"><li class="carte-liste-puce">développement du jeu vidéo <a href="https://fr.wikipedia.org/wiki/Gray_Matter_(jeu_vid%C3%A9o)" target="_blank" rel="noopener" class="lien">Gray Matter</a> chez <a href="https://fr.wikipedia.org/wiki/Wizarbox" target="_blank" rel="noopener" class="lien">Wizarbox</a></li></ul></div>
             </section>
             <section id="labo" class="bloc-text">
                 <h1>Lab</h1>
@@ -119,12 +111,12 @@
             }
           }).then(response => {
             status.innerHTML = "Merci pour votre message !";
-            form.reset()
+            form.reset();
           }).catch(error => {
-            status.innerHTML = "Oups ! Il y a eu un souci dans la soumission du formulaire"
+            status.innerHTML = "Oups ! Il y a eu un souci dans la soumission du formulaire";
           });
         }
-        form.addEventListener("submit", handleSubmit)
+        form.addEventListener("submit", handleSubmit);
     </script>
     <!-- -->
 </body>
