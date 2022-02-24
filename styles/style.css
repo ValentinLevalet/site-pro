@@ -9,7 +9,6 @@ body, html {
 }
 
 body {
-  cursor: default;
   font: 1.125em "Calibri", sans-serif;
   margin: auto;
 }
@@ -31,6 +30,10 @@ h1 {
 p {
   line-height: 1.5;
   margin-top: 0;
+}
+
+.mb1 {
+  margin-bottom: 1em;
 }
 
 .icone-contact:hover {
@@ -239,14 +242,13 @@ p {
   border: solid 1px;
   font-family: inherit;
   font-size: inherit;
-  margin: auto auto 1em;
+  margin: .25em auto 1em;
   padding: .25em .1em;
   width: 100%;
 }
 
 button {
   border: none;
-  float: right;
   font-family: calibri;
   font-size: 1em;
   margin: auto;
@@ -311,6 +313,16 @@ textarea {
 
 .liens-sociaux li:hover {
   opacity: .75;
+}
+
+
+
+#g-recaptcha-response {
+  display: block !important;
+  position: absolute;
+  margin: -50px 0 0 0 !important;
+  z-index: -999999;
+  opacity: 0;
 }
 
 @media screen and (max-width: 50em) {

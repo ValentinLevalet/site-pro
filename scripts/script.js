@@ -47,3 +47,11 @@ fermer.addEventListener("click", function(){
 demoFrameWrapper.addEventListener("click", function(){
     demoFrameWrapper.classList.replace("affiche","hidden");
 });
+
+/* make recaptcha mandatory */
+window.onload = function() { 
+  var el = document.getElementById('g-recaptcha-response'); 
+  if (el) { 
+    el.setAttribute('required', 'required'); 
+  } 
+}

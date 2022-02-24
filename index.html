@@ -11,6 +11,7 @@
     <title>valentin levalet / développeur web front</title>
     <link rel="canonical" href="https://valev.fr" />
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="wrapper">
@@ -85,11 +86,12 @@
                 <p>Voyons comment nous pouvons travailler ensemble.</p>
                 <form id="my-form" action="https://formspree.io/f/mwkaqzzy" method="POST">
                   <label>Votre e-mail :
-                    <input type="email" name="email" class="champ" required/>
+                    <input type="email" name="email" class="champ" placeholder="email@exemple.fr" required />
                   </label>
                   <label>Votre message :
-                    <input type="text" name="message" class="champ" required/>
+                    <textarea name="message" class="champ" placeholder="Exprimez vous ici !" required></textarea>
                   </label>
+                  <div class="g-recaptcha mb1" data-sitekey="6Ldk2iUcAAAAAFqTXixC-JiqbUemkfka6xGu_Jk_"></div>
                   <button id="my-form-button">Envoyer</button>
                   <p id="my-form-status">&nbsp;</p>
                 </form>
